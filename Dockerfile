@@ -2,7 +2,7 @@ FROM docker:stable
 
 RUN apk add --update ca-certificates \
  && apk add --update -t deps curl  \
- && apk add --update gettext tar gzip \
+ && apk add --update openssh gettext tar gzip \
  && apk add --no-cache python py-pip git bash gawk curl bash \
  && apk add --no-cache -X http://dl-cdn.alpinelinux.org/alpine/edge/testing git-secret \
  && curl -sSL https://sdk.cloud.google.com | bash \
