@@ -8,7 +8,7 @@ RUN apk add --update ca-certificates \
  && curl -sSL https://sdk.cloud.google.com | bash \
  && curl -L https://storage.googleapis.com/kubernetes-release/release/v1.15.3/bin/linux/amd64/kubectl -o /usr/local/bin/kubectl \
  && curl https://raw.githubusercontent.com/helm/helm/master/scripts/get-helm-3 | bash \
-#  && curl -L https://storage.googleapis.com/kubernetes-helm/helm-v2.14.3-linux-amd64.tar.gz | tar xz && mv linux-amd64/helm /bin/helm && rm -rf linux-amd64 \
+ && curl -L https://storage.googleapis.com/kubernetes-helm/helm-v2.16.1-linux-amd64.tar.gz | tar xz && mv linux-amd64/helm /bin/helm2 && rm -rf linux-amd64 \
  && chmod +x /usr/local/bin/kubectl \
  && apk del --purge deps \
  && rm /var/cache/apk/*
